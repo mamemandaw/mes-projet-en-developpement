@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    list-style: none;
+    overflow-x: hidden;
+}
+body{
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-height: 200vh;
+
+}
+.box{
+    border: 5px solid yellow;
+    padding: 10px;
+    margin: 0;
+    transition: 0.25s ease;
+    background-color: black;
+  
+
+}
+p{
+    visibility: hidden;
+margin: 0;
+width: 245px; 
+background-color: blue;
+/* padding: 10px auto 0; */
+transform: translateX(-200px);
+transition: 0.25s ease;
+
+}
+.question-clicked{
+    border-radius: 8px ;
+   border: 4px  dashed green;
+   background-image: url(sencart.png) ;
+    align-content: center;
+
+}
+.mame{
+    visibility: visible;
+    opacity: 2;
+    transform: translateX(0);
+    transition: 2s ease;
+}
+.gueye{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 5s ease;
+}
+.mousemove{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(170, 170, 240);
+    transform: translate(-50%,-50%);
+    transition: .2s ease;
+      
+    /* le z-index permets de placer notre élément devant un otre élément , si la valeur affecté est négative il se place derriére */
+}
+.keypress{
+    text-align: center;
+    
+}
+nav{
+    background-color: pink;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    transition: .5s ease;
+    top: -50px;
+
+}
+.viga::after{
+    content:"";
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle closest-side rgba(231, 226, 226, 0.94) );
+    position: absolute;
+    transition: 0.25s;
+    transform: translate(-25%, -25%);
+    opacity: 0;
+    z-index: -20px;
+    top:var(--y);
+    left: var(--x) ;
+
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+padding: 0;
+}
+form{
+    /* position: fixed;  */
+    background-color: blue;
+    width: 100%;
+    height: 120px;
+}
+.bvalider{
+    position: relative;
+    top: 25px;
+    left: -350px;
+}
+.viga:hover::after{
+    opacity: 1;
+}
